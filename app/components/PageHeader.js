@@ -15,7 +15,9 @@ function PageHeader({ header, goBack }) {
         style={styles.backButton}
         onPress={() => navigation.goBack(null)}
       />
-      <Text style={styles.header}>{header}</Text>
+      <View style={{ flex: 7, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={styles.heading } numberOfLines={1} ellipsizeMode='tail'>{header}</Text>
+      </View>
     </View>
   );
 }
@@ -31,7 +33,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'stretch',
   },
-  header: {
+  heading: {
     fontWeight: 'bold',
     fontSize: 20,
     position: 'absolute',
